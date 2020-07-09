@@ -14,7 +14,7 @@ class Store {
    */
   deleteGood(goodId) {
     let indexToRemove = _state.goods.findIndex(good => good.id == goodId)
-    _state.goodsgoodgoodenough.splice(indexToRemove, 1)
+    _state.goods.splice(indexToRemove, 1)
   }
 
   addToCart(item) {
