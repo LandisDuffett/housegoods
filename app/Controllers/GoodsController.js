@@ -36,4 +36,16 @@ export default class GoodsController {
     _draw()
   }
 
+  decreaseQuantity(item) {
+    _goodsService.decreaseQuantity(item)
+    _draw()
+  }
+  increaseQuantity(item) {
+    _goodsService.increaseQuantity(item)
+    _draw()
+  }
+  deleteFromCart(item) {
+    _goodsService.deleteFromCart(item)
+    _draw()
+  }
 }

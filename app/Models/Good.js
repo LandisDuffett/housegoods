@@ -35,6 +35,9 @@ export default class Good {
             <img class="img-fluid" src="${this.imgUrl}"/>
             <h1>Item Price: ${this.price}</h1>
             <h1>Quantity: ${this.howmany}</h1>
+             <span><button class="btn rounded btn-primary border border-dark" onclick="app.goodsController.decreaseQuantity('${this.id}')">Decrease Quantity</button></span>
+             <span><button class="btn rounded btn-primary border border-dark" onclick="app.goodsController.increaseQuantity('${this.id}')">Increase Quantity</button></span>
+             <span><button class="btn rounded btn-danger border border-dark" onclick="app.goodsController.deleteFromCart('${this.id}')">Delete</button></span>
             </div>
             `
         return template2
