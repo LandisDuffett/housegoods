@@ -9,7 +9,7 @@ function _draw() {
   let goods = _store.State.goods
   let buys = _store.State.cart
   goods.forEach(good => template += good.Template)
-  buys.forEach(product => template2 += product.Template)
+  buys.forEach(product => template2 += product.Template2)
   document.getElementById("goods").innerHTML = template
   document.getElementById("credit").innerHTML = _store.Money.toString()
   document.getElementById("incart").innerHTML = template2

@@ -27,7 +27,9 @@ class Store {
       if (product.quantity > 0) {
         money -= product.price;
         product.howmany++;
-        _state.cart.push(product);
+        if (findCartIndex == -1) {
+          _state.cart.push(product);
+        }
         product.quantity--;
       } else {
         alert("Sorry. Out of stock")
