@@ -14,17 +14,26 @@
 </head>
 
 <body>
-    <div>
-        <h1>Landis House Goods</h1>
-        <h3>With a name like 'Landis', you know it has to be either at or minimally above the level 'adequate'. That's
-            our Guarantee!</h3>
+    <nav class="navbar funk">
+        <a class="navbar-brand p-4 justify-content-center" href="#">
+            <img src="https://icons.veryicon.com/48/System/Red%20Orb%20Alphabet/Letter%20L.png" width="30" height="30"
+                class="d-inline-block align-top" alt="">
+            LANDIS House Goods
+        </a>
+    </nav>
+    <div class="quote">
+        <h5 class="italic text-center">With a name like 'Landis', you know it has to be either at or minimally above the
+            level
+            of 'adequate'.
+            That's
+            our Guarantee!</h5>
     </div>
-    <div class="row">
+    <div class="row stock">
         <div class="col-4">
             <button class="btn rounded btn-primary border border-dark" onclick="app.goodsController.addMoney()">Add
                 Credit</button>
         </div>
-        <div class="col-4">Total Credit:<span id="credit"></span></div>
+        <div class="col-4">TOTAL CREDIT: $<span id="credit"></span></div>
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
             Your Cart
         </button>

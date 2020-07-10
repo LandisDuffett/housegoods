@@ -12,16 +12,18 @@ export default class Good {
 
     get Template() {
         let template =
-            `<div class="col-4 border rounded shadow">
-            <h1>${this.name}</h1>
-            <h1>id#${this.id}</h1>
-            <img class="img-fluid" src="${this.imgUrl}"/>
-            <h1>${this.price}</h1>
-            <h1>${this.quantity}</h1>
-            <h1>${this.description}</h1>
-            <div class="row justify-content-between">
+            ` <div class="panel panel-default rounded bg-light m-4 col-3">
+            <div class="panel-body p-3 text-center">
+            <h5><b>${this.name}</b></h5>
+            <h5>id#${this.id}</h5>
+            <img class="img-fluid m-2" src="${this.imgUrl}"/>
+            <h5>Price: $${this.price}</h5>
+            <h5>Quantity in Stock: ${this.quantity}</h5>
+            <h5>"${this.description}"</h5>
+            <div class="row justify-content-between align-content-end">
             <span><button class="btn rounded btn-primary border border-dark" onclick="app.goodsController.addToCart('${this.id}')">BUY</button></span>
             <span><button class="btn rounded btn-danger border border-dark" onclick="app.goodsController.deleteGood('${this.id}')">DELETE</button></span>
+            </div>
             </div>
             </div>
             `
@@ -31,10 +33,10 @@ export default class Good {
     get Template2() {
         let template2 =
             `<div class="col-12 border rounded shadow">
-            <h1>Item: ${this.name}</h1>
-            <img class="img-fluid" src="${this.imgUrl}"/>
-            <h1>Item Price: ${this.price}</h1>
-            <h1>Quantity: ${this.howmany}</h1>
+            <h3>Item: ${this.name}</h3>
+            <img class="img-fluid high" src="${this.imgUrl}"/>
+            <h5>Item Price: ${this.price}</h5>
+            <h5>Quantity: ${this.howmany}</h5>
              <span><button class="btn rounded btn-primary border border-dark" onclick="app.goodsController.decreaseQuantity('${this.id}')">Decrease Quantity</button></span>
              <span><button class="btn rounded btn-primary border border-dark" onclick="app.goodsController.increaseQuantity('${this.id}')">Increase Quantity</button></span>
              <span><button class="btn rounded btn-danger border border-dark" onclick="app.goodsController.deleteFromCart('${this.id}')">Delete</button></span>
