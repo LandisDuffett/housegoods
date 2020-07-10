@@ -52,7 +52,14 @@ class Store {
       money += _state.cart[indexToDecrease].price
       totalPrice -= _state.cart[indexToDecrease].price
     }
+    this.checkQuantity(item)
+  }
 
+  checkQuantity(item) {
+    let indexToRemove = _state.cart.findIndex(wampum => wampum.id == item)
+    if (_state.cart[indexToRemove].howmany == 0) {
+      _state.cart.splice(indexToRemove, 1)
+    }
   }
   increaseQuantity(item) {
     let productIndex = _state.goods.findIndex(good => good.id == item)

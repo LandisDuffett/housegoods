@@ -1,6 +1,7 @@
 .inventory {
     flex-wrap: wrap;
     background-color: teal;
+    justify-content: center;
 }
 
 body {
