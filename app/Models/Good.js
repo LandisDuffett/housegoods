@@ -7,6 +7,7 @@ export default class Good {
         this.price = data.price;
         this.quantity = data.quantity;
         this.description = data.description;
+        this.incart = 0;
     }
 
     get Template() {

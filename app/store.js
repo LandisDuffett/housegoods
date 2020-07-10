@@ -24,6 +24,7 @@ class Store {
     if (money >= product.price) {
       if (product.quantity > 0) {
         money -= product.price;
+        product.incart++;
         _state.cart.push(product);
         product.quantity--;
       } else {
@@ -38,7 +39,15 @@ class Store {
   }
 
   showCart() {
-    alert(_state.goods)
+    let temp = ""
+    let temp2 = 0
+    _state.cart.forEach(thing => temp2 += thing.incart * thing.price)
+    let temp3 = temp + "Total: " + temp2.toString()
+    _state.cart.forEach(thing => temp += `Item: ${thing.name}
+                                          Price: ${thing.price}
+                                          Quantity: ${thing.incart}
+                                          `)
+    alert(temp3)
   }
   get State() {
     return _state;
