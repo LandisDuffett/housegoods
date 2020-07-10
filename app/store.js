@@ -21,7 +21,7 @@ class Store {
 
   addToCart(item) {
     let findItemIndex = _state.goods.findIndex(a => a.id == item)
-    let findCartIndex = _state.cart.findIndex(b => b.index ==)
+    let findCartIndex = _state.cart.findIndex(b => b.id == item)
     let product = _state.goods[findItemIndex]
     if (money >= product.price) {
       if (product.quantity > 0) {
