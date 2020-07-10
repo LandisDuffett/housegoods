@@ -11,14 +11,18 @@ export default class Good {
 
     get Template() {
         let template =
-            `<div class="col-4 border rounded shadow>
-            <h1>id#${this.name}</h1>
+            `<div class="col-4 border rounded shadow">
+            <h1>${this.name}</h1>
             <h1>id#${this.id}</h1>
             <img class="img-fluid" src="${this.imgUrl}"/>
             <h1>${this.price}</h1>
             <h1>${this.quantity}</h1>
             <h1>${this.description}</h1>
-            <button class="btn rounded btn-primary border border-dark" onclick="app.vendorController.addToCart('${this.id}')">BUY</button>
+            <div class="row justify-content-between">
+            <span><button class="btn rounded btn-primary border border-dark" onclick="app.goodsController.addToCart('${this.id}')">BUY</button></span>
+            <span><button class="btn rounded btn-danger border border-dark" onclick="app.goodsController.deleteGood('${this.id}')">DELETE</button></span>
+            </div>
+            </div>
             `
         return template
     }

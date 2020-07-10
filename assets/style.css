@@ -1,1 +1,3 @@
-/* Styles */
+.inventory {
+    flex-wrap: wrap;
+}

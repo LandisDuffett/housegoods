@@ -19,16 +19,14 @@
     </div>
     <div class="row">
         <div class="col-4">
-            <button class="btn rounded btn-primary border border-dark" onclick="app.vendorController.addMoney()">Add
+            <button class="btn rounded btn-primary border border-dark" onclick="app.goodsController.addMoney()">Add
                 Credit</button>
         </div>
-        <div class="col-4">Total Credit:<span id="inserted"></span></div>
-        <button class="btn rounded btn-primary border border-dark" onclick="app.vendorController.showCart()">Your
+        <div class="col-4">Total Credit:<span id="credit"></span></div>
+        <button class="btn rounded btn-primary border border-dark" onclick="app.goodsController.showCart()">Your
             Cart</button>
     </div>
-    <div class="row">
-        <div id="target"></div>
-    </div>
+    <div class="d-flex inventory" id="goods"></div>
 
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->

@@ -6,18 +6,21 @@ class GoodsService {
   constructor() {
     console.log("Hello from Service")
   }
-}
 
-showCart() {
-  _store.showCart()
-}
+  showCart() {
+    _store.showCart()
+  }
 
-addToCart() {
-  _store.addToCart(item)
-}
-deleteGood(goodId) {
-  _store.deleteGood(goodId)
-}
+  addToCart(item) {
+    _store.addToCart(item)
+  }
 
+  addMoney() {
+    _store.addMoney()
+  }
+  deleteGood(goodId) {
+    _store.deleteGood(goodId)
+  }
+}
 const SERVICE = new GoodsService();
 export default SERVICE;
