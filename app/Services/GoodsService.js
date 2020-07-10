@@ -7,9 +7,6 @@ class GoodsService {
     console.log("Hello from Service")
   }
 
-  showCart() {
-    _store.showCart()
-  }
 
   addToCart(item) {
     _store.addToCart(item)

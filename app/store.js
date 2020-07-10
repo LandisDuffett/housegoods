@@ -1,6 +1,7 @@
 import Good from "./Models/Good.js";
 let money = 0
 let totalCredit = 0
+let totalPrice = 0
 let _state = {
   // activeValue: new Good({ title: "Good" }),
   /** @type {Good[]} */
@@ -20,11 +21,12 @@ class Store {
 
   addToCart(item) {
     let findItemIndex = _state.goods.findIndex(a => a.id == item)
+    let findCartIndex = _state.cart.findIndex(b => b.index ==)
     let product = _state.goods[findItemIndex]
     if (money >= product.price) {
       if (product.quantity > 0) {
         money -= product.price;
-        product.incart++;
+        product.howmany++;
         _state.cart.push(product);
         product.quantity--;
       } else {
@@ -33,22 +35,14 @@ class Store {
     } else {
       alert("You do not have enough money to purchase this item.")
     }
+    totalPrice += product.price
   }
+
+
   addMoney() {
     money += 10
   }
 
-  showCart() {
-    let temp = ""
-    let temp2 = 0
-    _state.cart.forEach(thing => temp2 += thing.incart * thing.price)
-    let temp3 = temp + "Total: " + temp2.toString()
-    _state.cart.forEach(thing => temp += `Item: ${thing.name}
-                                          Price: ${thing.price}
-                                          Quantity: ${thing.incart}
-                                          `)
-    alert(temp3)
-  }
   get State() {
     return _state;
   }
@@ -57,6 +51,10 @@ class Store {
   }
   get Cart() {
     return cart;
+  }
+
+  get TotalPrice() {
+    return totalPrice;
   }
 }
 

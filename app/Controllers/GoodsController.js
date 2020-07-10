@@ -5,10 +5,15 @@ import _store from '../store.js'
 
 function _draw() {
   let template = ""
+  let template2 = ""
   let goods = _store.State.goods
+  let buys = _store.State.cart
   goods.forEach(good => template += good.Template)
+  buys.forEach(product => template2 += product.Template)
   document.getElementById("goods").innerHTML = template
   document.getElementById("credit").innerHTML = _store.Money.toString()
+  document.getElementById("incart").innerHTML = template2
+  document.getElementById("totaled").innerHTML = _store.TotalPrice.toString()
 }
 
 export default class GoodsController {
@@ -31,7 +36,4 @@ export default class GoodsController {
     _draw()
   }
 
-  showCart() {
-    _goodsService.showCart()
-  }
 }

@@ -7,7 +7,7 @@ export default class Good {
         this.price = data.price;
         this.quantity = data.quantity;
         this.description = data.description;
-        this.incart = 0;
+        this.howmany = 0;
     }
 
     get Template() {
@@ -26,5 +26,17 @@ export default class Good {
             </div>
             `
         return template
+    }
+
+    get Template2() {
+        let template2 =
+            `<div class="col-12 border rounded shadow">
+            <h1>Item: ${this.name}</h1>
+            <img class="img-fluid" src="${this.imgUrl}"/>
+            <h1>Item Price: ${this.price}</h1>
+            <h1>Quantity: ${this.howmany}</h1>
+            </div>
+            `
+        return template2
     }
 }
