@@ -67,16 +67,17 @@ class Store {
   increaseQuantity(item) {
     let productIndex = _state.goods.findIndex(good => good.id == item)
     let indexToDecrease = _state.cart.findIndex(wampum => wampum.id == item)
-    if (_state.goods[productIndex].quantity - _state.cart[indexToDecrease].howmany >= 1) { this.addToCart(item) } else { alert("Quantity exceeds current stock.") }
+    if (_state.goods[productIndex].quantity >= 1) { this.addToCart(item) } else { alert("Quantity exceeds current stock.") }
   }
   deleteFromCart(item) {
     let productIndex = _state.goods.findIndex(good => good.id == item)
     let indexToRemove = _state.cart.findIndex(wampum => wampum.id == item)
-    _state.cart.splice(indexToRemove, 1)
+    console.log(_state.cart[indexToRemove].price)
     money += _state.cart[indexToRemove].price * _state.cart[indexToRemove].howmany
     totalPrice -= _state.cart[indexToRemove].price * _state.cart[indexToRemove].howmany
     _state.goods[productIndex].quantity += _state.cart[indexToRemove].howmany
     _state.cart[indexToRemove].howmany = 0
+    _state.cart.splice(indexToRemove, 1)
 
   }
 
