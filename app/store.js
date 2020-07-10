@@ -88,7 +88,7 @@ class Store {
     return money;
   }
   get Cart() {
-    return cart;
+    return _state.cart;
   }
 
   get TotalPrice() {
