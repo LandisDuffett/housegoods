@@ -35,7 +35,7 @@ export default class Good {
             `<div class="col-12 border rounded shadow">
             <h3>Item: ${this.name}</h3>
             <img class="img-fluid high" src="${this.imgUrl}"/>
-            <h5>Item Price: ${this.price}</h5>
+            <h5>Item Price: $${this.price}</h5>
             <h5>Quantity: ${this.howmany}</h5>
              <span><button class="btn rounded btn-primary border border-dark" onclick="app.goodsController.decreaseQuantity('${this.id}')">Decrease Quantity</button></span>
              <span><button class="btn rounded btn-primary border border-dark" onclick="app.goodsController.increaseQuantity('${this.id}')">Increase Quantity</button></span>

@@ -27,7 +27,6 @@ export default class GoodsController {
   }
   addToCart(item) {
     _goodsService.addToCart(item)
-    console.log("pass1")
     _draw()
   }
 
